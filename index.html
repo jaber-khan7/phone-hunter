@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="images/shapes/shape-6.png"
+      type="image/x-icon"
+    />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <title>phone-hunter</title>
+  </head>
+  <body>
+    <section class="py-4 py-lg-5">
+      <h1 class="text-center">Phone Hunter</h1>
+
+      <!-- search button -->
+      <div class="input-group my-5 mx-auto">
+        <input type="text" id="search-field" class="form-control" placeholder="Search your favourite food :)" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <button class="btn" type="button" id="button-addon2">Search</button>
+      </div>
+
+      <!-- ================= show search result ================= -->
+      <section id="show-search-result">
+        <div class="container">
+          <!-- show results -->
+          <div id="search-results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5"></div>
+        </div>
+      </section>
+      
+
+    <!-- script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

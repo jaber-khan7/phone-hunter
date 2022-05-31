@@ -1,0 +1,79 @@
+/* css variables */
+:root {
+  --color-primary: #e03b8b;
+  --color-secondary: #242b2e;
+  --color-white: #fff;
+}
+
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Satisfy&display=swap");
+
+/* utilities */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 3.2rem;
+  color: var(--color-secondary);
+}
+
+ul li {
+  color: black;
+  list-style: none;
+  font-weight: 300;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.input-group {
+  width: 75%;
+  max-width: 700px;
+}
+
+#button-addon2 {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  transition: all 300ms;
+}
+
+#button-addon2:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+button {
+  max-width: 200px;
+  padding: 6px 30px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.card {
+  border: none;
+}
+
+.single-product {
+  padding: 2rem;
+  cursor: pointer;
+}
