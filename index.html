@@ -23,23 +23,52 @@
     <title>phone-hunter</title>
   </head>
   <body>
-    <section class="py-4 py-lg-5">
+    <section class="pt-4">
       <h1 class="text-center">Phone Hunter</h1>
+    </section>
 
+    <header id="header" class="pb-2">
       <!-- search button -->
       <div class="input-group my-5 mx-auto">
-        <input type="text" id="search-field" class="form-control" placeholder="Search your favourite food :)" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <input
+          type="text"
+          id="search-field"
+          class="form-control"
+          placeholder="Search your favourite food :)"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
         <button class="btn" type="button" id="button-addon2">Search</button>
       </div>
+    </header>
 
-      <!-- ================= show search result ================= -->
-      <section id="show-search-result">
+    <!-- ================= show search result ================= -->
+    <main>
+      <section id="show-search-result" class="mb-5">
         <div class="container">
           <!-- show results -->
-          <div id="search-results" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5"></div>
+          <div
+            id="search-results"
+            class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5"
+          ></div>
         </div>
       </section>
-      
+
+      <section id="detailes-section" class="my-4 my-md-5">
+        <div class="container">
+          <div class="parent shadow-lg">
+            <div id="x-mark" onclick="hideDetailesSection()">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div
+              id="show-detailes"
+              class="row row-cols-1 row-cols-lg-3 px-4 py-5 gx-5"
+            ></div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- script -->
     <script src="js/bootstrap.bundle.min.js"></script>

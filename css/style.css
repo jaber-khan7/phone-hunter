@@ -77,3 +77,40 @@ button:hover {
   padding: 2rem;
   cursor: pointer;
 }
+
+#detailes-section {
+  display: none;
+}
+
+.parent {
+  position: relative;
+}
+
+#x-mark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--color-primary);
+  display: inline-grid;
+  place-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+#x-mark:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+dt {
+  font-weight: 500;
+}
+
+.dd {
+  font-size: 1rem;
+  font-weight: 400;
+}
