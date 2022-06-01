@@ -1,10 +1,17 @@
 const showResults = document.getElementById("search-results");
 const detailesSection = document.getElementById("detailes-section");
 const searchResultSection = document.getElementById("show-search-result");
+const errorMessage = document.getElementById("error-message");
+const spinner = document.getElementById("spinner");
+errorMessage.style.display = "none";
+spinner.style.display = "none";
 
 // add event listener to the search button
 const searchButton = document.getElementById("button-addon2");
 searchButton.addEventListener("click", function () {
+  // show spinner
+  errorMessage.style.display = "none";
+  spinner.style.display = "block";
   showResults.textContent = "";
   const searchField = document.getElementById("search-field");
   const searchFieldValue = searchField.value;
@@ -21,7 +28,7 @@ searchButton.addEventListener("click", function () {
 
 // show search result
 const showSearchResult = (phones) => {
-  phones.forEach((phone) => {
+  phones.slice(0, 20).forEach((phone) => {
     // show results
     const col = document.createElement("div");
     col.classList.add("col");
@@ -64,6 +71,22 @@ const showSearchResult = (phones) => {
     // append div in show result
     showResults.appendChild(col);
   });
+
+  // hide spinner
+  spinner.style.display = "none";
+
+  try {
+    if (phones.length === 0) throw "404 Product not found";
+    else {
+      errorMessage.style.display = "none";
+    }
+  } catch (err) {
+    errorMessage.innerText = err;
+    errorMessage.classList.add("text-center");
+    errorMessage.style.display = "block";
+    errorMessage.style.color = "var(--color-primary";
+    errorMessage.style.fontFamily = "cursive";
+  }
 };
 
 // load detailes when click the show detailes button
